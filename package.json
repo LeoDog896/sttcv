@@ -1,12 +1,22 @@
 {
-  "name": "sttv",
+  "name": "sttcv",
   "version": "0.0.0",
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite",
     "build": "vite build",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "prepublishOnly": "npm run build && rm dist/style.css && rm dist/favicon.ico"
+  },
+  "files": ["dist"],
+  "main": "./dist/sttcv.umd.js",
+  "module": "./dist/sttcv.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/sttcv.es.js",
+      "require": "./dist/sttcv.umd.js"
+    }
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.37",

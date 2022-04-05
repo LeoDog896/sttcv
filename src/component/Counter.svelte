@@ -1,16 +1,12 @@
 <script lang="ts">
-  import { count } from './stores';
-
-  export let id: string;
+  export let count: number = 0;
 </script>
 
-<button 
-  {id} 
-  on:click={() => $count += 1}
-  data-testid={id}
+<button
+  on:click={() => count += 1}
   class="rounded-full py-4 px-8 border-2 border-transparent outline-none w-48 tabular-nums focus:border-opacity-100"
 >
-  Clicks: {$count}
+  Clicks: {count}
 </button>
 
 <style>

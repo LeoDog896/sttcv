@@ -1,13 +1,14 @@
 <script lang="ts">
   import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+  import Counter from './component/Counter.svelte'
+  import { count } from "./lib/stores"
 </script>
 
 <main class="text-center p-4 mx-0">
   <img width="100" height="100" src={logo} alt="Svelte Logo" class="inline-block" />
   <h1 class="text-6xl uppercase font-thin leading-tight my-8 mx-auto max-w-xs sm:max-w-xs">Hello Vite!</h1>
 
-  <Counter id="0" />
+  <Counter bind:count={$count} />
 
   <p class="max-w-xs sm:max-w-none my-4 mx-auto leading-5">
     Visit <a class="text-red-600 hover:underline" href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
@@ -23,6 +24,7 @@
     <a href="https://svelte.dev/" target="_blank" class="p-2 hover:underline">Svelte</a> +
     <a href="https://tailwindcss.com/" target="_blank" class="p-2 hover:underline">Tailwind CSS</a> +
     <a href="https://www.typescriptlang.org/" target="_blank" class="p-2 hover:underline">TypeScript</a> +
+    Component + 
     <a href="https://vitejs.dev/" target="_blank" class="p-2 hover:underline">Vite</a>
   </div>
 </main>
