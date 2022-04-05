@@ -213,9 +213,9 @@ class SvelteComponent {
     const callbacks = this.$$.callbacks[type] || (this.$$.callbacks[type] = []);
     callbacks.push(callback);
     return () => {
-      const index2 = callbacks.indexOf(callback);
-      if (index2 !== -1)
-        callbacks.splice(index2, 1);
+      const index = callbacks.indexOf(callback);
+      if (index !== -1)
+        callbacks.splice(index, 1);
     };
   }
   $set($$props) {
@@ -278,5 +278,4 @@ class Counter extends SvelteComponent {
     init(this, options, instance, create_fragment, safe_not_equal, { count: 0 });
   }
 }
-var index = { Counter };
-export { index as default };
+export { Counter as default };
