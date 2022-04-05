@@ -1,3 +1,3 @@
 import Counter from "./Counter.svelte"
 
-export default { Counter }
+export default Counter
