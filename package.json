@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite",
     "build": "vite build",
+    "build:site": "vite build -c site.config.js",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "serve": "vite preview",
     "prepublishOnly": "npm run build && rm dist/style.css && rm dist/favicon.ico"
   },
   "files": ["dist"],

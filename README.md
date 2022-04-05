@@ -1,4 +1,4 @@
-STTV - Svelte / Typescript / Tailwind / Vite Template
+STTCV - Svelte / Typescript / Tailwind / Component / Vite Template
 =====================================================
 
 Get up and running with Svelte, Typescript, Tailwind and Vite. Also includes testing setup using Jest.
@@ -7,7 +7,7 @@ Installation
 ------------
 
 ```
-npx degit "srmullen/sttv#main" my_app
+npx degit "LeoDog896/sttcv#main" my_app
 cd my_app
 npm install
 ```
@@ -15,7 +15,7 @@ npm install
 Scripts
 -------
 
-### Start a development server
+### Start a dev server
 
 `npm run dev`
 
@@ -25,10 +25,10 @@ Scripts
 or
 `npm run test:watch`
 
-### Build the application
+### Build the library
 
 `npm run build`
 
-### Serve the application
+### Publish the library
 
-`npm run serve`
+`npm run publish`
